@@ -15,11 +15,11 @@ const types = {
   "rock": { "color": "#B8A039"},
   "water": { "color": "#6890F0"}
 }
-export default function TypeShowcase({type}) {
+export default function TypeShowcase({type, width = "100%"}) {
   const typeColor = types[type].color
   return(
-    <div style={{borderRadius: 10, backgroundColor: typeColor, fontColor: 'white', padding: 5}}>
-      {type}
+    <div style={{      border: "1px solid black", boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)", borderRadius: 10, backgroundColor: typeColor, fontColor: 'white', padding: 15, width, textAlign: "center"}}>
+      {type.toUpperCase()}
     </div>
   )
 }

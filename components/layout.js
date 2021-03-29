@@ -7,7 +7,8 @@ import Link from 'next/link'
 const name = "Kayla's Pokemon Site"
 export const siteTitle = "Kayla's Pokemon Site"
 
-export default function Layout({ children, home }) {
+export default function Layout({ children, home, id }) {
+
   return (
     <div className={styles.container}>
       <Head>
@@ -58,7 +59,9 @@ export default function Layout({ children, home }) {
           </>
         )}
       </header>
+
       <main>{children}</main>
+
       {!home && (
         <div className={styles.backToHome}>
           <Link href="/">
